@@ -25,7 +25,6 @@ class Gallery {
       preventClicksPropagation: true,
       autoHeight              : true
     });
-    console.log(slide);
     return slide;
   }
 
