@@ -1,0 +1,23 @@
+@use "global" as *;
+
+.l-header {
+  padding: 60px 0;
+  @include responsive(md) {
+    padding: 90px 0;
+  }
+  @include responsive(xl) {
+  }
+
+  &__title{
+    text-align: center;
+    font-size: 24px;
+    font-weight: 300;
+    @include responsive(md) {
+      font-size: 30px;
+    }
+    @include responsive(xl) {
+    }
+  }
+}
+
+

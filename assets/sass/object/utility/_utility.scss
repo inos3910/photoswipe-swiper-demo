@@ -1,0 +1,115 @@
+@use "global" as *;
+
+.u-frame{
+  @include responsive(md) {
+    max-width: calc(100% - #{vw-size-pc(150)});
+    margin-right: auto;
+    margin-left: auto;
+  }
+  @include responsive(lg) {
+    max-width: vw-size-pc($frame_w);
+  }
+  @include responsive(xl) {
+    max-width:#{$bp_base};
+  }
+
+}
+
+.u-noscroll{
+  overflow: hidden;
+  height:100%;
+}
+
+.u-overflowHidden {
+  overflow: hidden;
+}
+
+.u-noevent{
+  pointer-events:none;
+}
+
+.u-exSp {
+  display: none;
+  content-visibility: hidden;
+  @include responsive(md) {
+    display: initial;
+    content-visibility: visible;
+  }
+
+  &--grid{
+    display: none;
+    content-visibility: hidden;
+    @include responsive(md) {
+      display: grid;
+      content-visibility: visible;
+    }
+  }
+
+  &--flex{
+    display: none;
+    content-visibility: hidden;
+    @include responsive(md) {
+      display: flex;
+      content-visibility: visible;
+    }
+  }
+
+  &--block{
+    display: none;
+    @include responsive(md) {
+      display: block;
+      content-visibility: visible;
+    }
+  }
+
+  &--inline-block{
+    display: none;
+    @include responsive(md) {
+      display: inline-block;
+      content-visibility: visible;
+    }
+  }
+}
+
+.u-sp{
+  @include responsive(md) {
+    display: none;
+    content-visibility: hidden;
+  }
+}
+
+.u-preline{
+  white-space: pre-line;
+}
+
+.u-helvetica{
+  font-family: 'Helvetica Neue', sans-serif;
+}
+
+.u-svg{
+  position: relative;
+  height: 0;
+
+  svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.u-video{
+  position: relative;
+  width: 100%;
+  padding-top: 56.25%;
+
+  iframe {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+

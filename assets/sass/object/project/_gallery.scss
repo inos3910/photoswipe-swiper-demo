@@ -1,0 +1,87 @@
+@use "sass:meta";
+@use "global" as *;
+
+.p-gallery {
+  @include responsive(md) {
+  }
+  @include responsive(xl) {
+  }
+
+  &:nth-child(n + 2){
+    margin-top: 150px;
+    @include responsive(md) {
+      margin-top: 300px;
+    }
+    @include responsive(xl) {
+    }
+  }
+
+  &__caption{
+    text-align: center;
+    font-size: 18px;
+    @include responsive(md) {
+      font-size: 24px;
+    }
+    @include responsive(xl) {
+    }
+  }
+
+  &__text{
+    margin-top: 15px;
+    text-align: center;
+    line-height: 2;
+  }
+
+  &__inner{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0 15px;
+    margin-top: 15px;
+    @include responsive(md) {
+      padding: 0;
+      margin-top: 30px;
+    }
+    @include responsive(xl) {
+    }
+
+    a{
+      display: block;
+
+      @media (any-hover:hover) {
+        &:hover{
+          box-shadow: $boxshadow2;
+        }
+      }
+    }
+
+    img{
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    &--swiper{
+      max-width: 600px;
+      margin-right: auto;
+      margin-left: auto;
+      .swiper-slide{
+      }
+    }
+  }
+
+  &__item{
+    width: calc(25% - 9px);
+    margin-bottom: 9px;
+
+    @include responsive(md) {
+      width: calc(16.666% - 18px);
+      margin-bottom: 18px;
+    }
+    @include responsive(xl) {
+    }
+
+  }
+}

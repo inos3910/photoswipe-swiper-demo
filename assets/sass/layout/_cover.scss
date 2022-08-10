@@ -1,0 +1,9 @@
+@use "global" as *;
+
+.l-cover {
+  @include responsive(md) {
+  }
+  @include responsive(xl) {
+  }
+}
+

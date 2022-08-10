@@ -1,0 +1,27 @@
+@use "global" as *;
+
+.l-footer {
+  padding: 150px 0 60px;
+  text-align: center;
+  @include responsive(md) {
+    padding: 150px 0 90px;
+  }
+  @include responsive(xl) {
+  }
+
+  &__back{
+    display: inline-block;
+    font-size: 12px;
+    line-height: 2;
+    @include responsive(md) {
+    }
+    @include responsive(xl) {
+    }
+
+    @media (any-hover:hover) {
+      &:hover{
+        text-decoration: underline;
+      }
+    }
+  }
+}
