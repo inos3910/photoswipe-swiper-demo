@@ -13,3 +13,7 @@
 ### npm scripts
 - `npm run dev` or `yarn dev` 開発モード
 - `npm run build` or `yarn build` 本番モードでビルド
+
+## 記事ページ
+【JS】MutationObserverでDOMを監視する[PhotoSwipe（v5）+Swiper（v8）連携デモ]
+https://notes.sharesl.net/articles/2539/
