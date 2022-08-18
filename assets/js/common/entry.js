@@ -1,11 +1,23 @@
+import imagesLoaded from 'imagesloaded'
 import Swiper, {Navigation, Pagination} from 'swiper';
 import PhotoSwipeLightbox from 'photoswipe/lightbox';
 import PhotoSwipe from 'photoswipe';
 
 class Gallery {
   constructor() {
-    this.swiper = this.slide();
-    this.imagePopUp(this.swiper);
+    this.imagesloaded();
+  }
+
+  imagesloaded(){
+    const slide = document.getElementById('js-slide');
+    if(!slide){
+      return;
+    }
+
+    imagesLoaded(slide, () => {
+      this.swiper = this.slide();
+      this.imagePopUp(this.swiper);
+    });
   }
 
   // スライド（Swiper）
@@ -71,6 +83,7 @@ class Gallery {
     });
 
     lightbox.on('openingAnimationEnd', () => {
+      console.log(lightbox);
       target = document.querySelector('.pswp__counter');
         // 監視の開始
         observer.observe(target, {
@@ -81,6 +94,10 @@ class Gallery {
     lightbox.on('closingAnimationEnd', () => {
       observer.disconnect();
     });
+
+    // lightbox.on('change', () => {
+    //   swiper.slideTo(lightbox.pswp.currIndex);
+    // });
 
     lightbox.init();
   }
