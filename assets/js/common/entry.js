@@ -83,7 +83,6 @@ class Gallery {
     });
 
     lightbox.on('openingAnimationEnd', () => {
-      console.log(lightbox);
       target = document.querySelector('.pswp__counter');
         // 監視の開始
         observer.observe(target, {

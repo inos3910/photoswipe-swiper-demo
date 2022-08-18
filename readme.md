@@ -7,8 +7,7 @@
 - browserSync
 
 ## メモ
-- タスクランナーはテーマに設置してあるのでテーマディレクトリで起動する
-- `sudo yarn` or `npm install`で環境作成
+- `yarn` or `npm install`で環境作成
 - node_modulesがpermission errorの場合は `sudo chmod 777 [node_modulesのパス]`で権限を変更すればOK
 
 ### npm scripts
